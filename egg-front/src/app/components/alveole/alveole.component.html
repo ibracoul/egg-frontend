@@ -1,6 +1,21 @@
+<div class="list" *ngIf="isContentVisible">
+    <ul>
+        <li *ngFor="let d of data">
+            {{d.quantite}}
+            {{d.prix_uni}}
+            {{d.prix_tt}}
+            {{d.taille}}
+            {{d.wati}}
+        </li>
+    </ul>
+  </div>
+
+  <button class="btn btn-primary" (click)="toggleContentVisibility()">Liste commandes</button>
+
+
 <div class="container">
     <h1>Commander</h1>
-    <form class="needs-validation" novalidate (ngSubmit)="submitForm()">
+    <form class="needs-validation" novalidate (ngSubmit)="submitOrders()">
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="prenom">Quantité</label>
