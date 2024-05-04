@@ -1,0 +1,14 @@
+.container {
+    background-image: url('../assets/images/font.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+.navbar{
+    margin-bottom: 20px;
+    
+    
+}
+.navbar .collapse{
+    padding-left: 700px;
+}
