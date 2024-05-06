@@ -1,0 +1,13 @@
+<h1>Liste des commandes</h1>
+
+<div class="list" *ngIf="isContentVisible">
+    <ul>
+        <li *ngFor="let d of data">
+            {{d.quantite}}
+            {{d.prix_uni}}
+            {{d.prix_tt}}
+            {{d.taille}}
+            {{d.wati}}
+        </li>
+    </ul>
+  </div>

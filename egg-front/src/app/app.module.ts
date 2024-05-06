@@ -9,6 +9,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule, HttpClient, provideHttpClient } from '@angular/common/http';
 import { AlveoleComponent } from './components/alveole/alveole.component';
+import { ListComponent } from './components/list/list.component';
 
 
 
@@ -19,7 +20,8 @@ import { AlveoleComponent } from './components/alveole/alveole.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    AlveoleComponent
+    AlveoleComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,39 +1,29 @@
-<div class="list" *ngIf="isContentVisible">
-    <ul>
-        <li *ngFor="let d of data">
-            {{d.quantite}}
-            {{d.prix_uni}}
-            {{d.prix_tt}}
-            {{d.taille}}
-            {{d.wati}}
-        </li>
-    </ul>
-  </div>
-
-  <button class="btn btn-primary" (click)="toggleContentVisibility()">Liste commandes</button>
-
-
+<!-- <button class="btn btn-primary" (click)="toggleContentVisibility()" routerLink="/list">Liste commandes</button> -->
+<h3>Commander ou voir la liste des commandes</h3>
 <div class="container">
-    <h1>Commander</h1>
-    <form class="needs-validation" novalidate (ngSubmit)="submitOrders()">
+    
+    <form id="myForm" class="needs-validation" novalidate (ngSubmit)="submitOrders()">
         <div class="form-row">
-            <div class="col-md-4 mb-3">
+            <div class="col-md-6 mb-1">
                 <label for="prenom">Quantité</label>
                 <input type="number" class="form-control" id="quantite" name="quantite" [(ngModel)]="formData.quantite"
-                    placeholder="Saisie le nombre d'alveoles" required>
+                    placeholder="Nombre d'alveoles à commander" required>
                 <div class="valid-feedback">Ok !</div>
                 <div class="invalid-feedback">Valeur incorrecte</div>
             </div>
 
-            <div class="col-md-4 mb-3">
+            <div class="col-md-6 mb-1">
                 <label for="prenom">Prix unitaire</label>
-                <input type="number" class="form-control" id="prix_uni" name="prix_uni" [(ngModel)]="formData.prix_uni"
+                <input type="number" class="form-control" id="prix_uni" name="prix_uni" list="liste-prix" [(ngModel)]="formData.prix_uni"
                     placeholder="Prix unitaire" required>
+                    <datalist id="liste-prix">
+                        <option *ngFor="let p of prix" [value]="p">
+                      </datalist>
                 <div class="valid-feedback">Ok !</div>
                 <div class="invalid-feedback">Valeur incorrecte</div>
             </div>
 
-            <div class="col-md-4 mb-3">
+            <div class="col-md-6 mb-1">
                 <label for="prenom">Prix total</label>
                 <input type="number" class="form-control" id="prix_tt" name="prix_tt" [(ngModel)]="formData.prix_tt"
                     placeholder="Prix total" required>
@@ -41,7 +31,7 @@
                 <div class="invalid-feedback">Valeur incorrecte</div>
             </div>
 
-            <div class="col-md-4 mb-3">
+            <div class="col-md-6 mb-1">
                 <label for="prenom">Taille</label>
                 <input type="text" class="form-control" id="taille" name="taille" [(ngModel)]="formData.taille"
                     placeholder="Taille" required>
@@ -49,7 +39,7 @@
                 <div class="invalid-feedback">Valeur incorrecte</div>
             </div>
 
-            <div class="col-md-4 mb-3">
+            <div class="col-md-6 mb-1">
                 <label for="prenom">Date de sortie</label>
                 <input type="date" class="form-control" id="wati" name="wati" [(ngModel)]="formData.wati"
                     placeholder="Date de sortie de l'alveole" required>
@@ -58,6 +48,21 @@
             </div>
 
             <button class="btn btn-primary" type="submit">Envoyer</button>
+            
         </div>
     </form>
+    <div class="list">
+        <div>
+            <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition 
+                et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de 
+                l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla 
+                ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
+            </p>
+            <button class="btn btn-success" (click)="toggleContentVisibility()" routerLink="/list">Afficher</button>
+        </div>
+        
+        <!-- <a class="nav-link active" (click)="toggleContentVisibility()" aria-current="page" routerLink="/list">List</a> -->
+    </div>
+    
+
 </div>
