@@ -1,13 +1,33 @@
 <h1>Liste des commandes</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Quantite</th>
+        <th>Prix Unitaire</th>
+        <th>Prix Total</th>
+        <th>Taille</th>
+        <th>Date de sortie</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr *ngFor="let d of data">        
+        <td>{{d.quantite}}</td>
+        <td>{{d.prix_uni}}</td>
+        <td>{{d.prix_tt}}</td>
+        <td>{{d.taille}}</td>
+        <td>{{d.wati}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
 
-<div class="list" *ngIf="isContentVisible">
-    <ul>
-        <li *ngFor="let d of data">
-            {{d.quantite}}
-            {{d.prix_uni}}
-            {{d.prix_tt}}
-            {{d.taille}}
-            {{d.wati}}
-        </li>
-    </ul>
-  </div>
+
+
+ 
+  
+
+
+
+
+

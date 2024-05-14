@@ -7,11 +7,10 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
-import { HttpClientModule, HttpClient, provideHttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AlveoleComponent } from './components/alveole/alveole.component';
 import { ListComponent } from './components/list/list.component';
-
-
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 @NgModule({
@@ -29,15 +28,12 @@ import { ListComponent } from './components/list/list.component';
     FormsModule,
     HttpClientModule
 ],
-    
-  // providers: [
-  //   provideHttpClient(HttpClient, {
-  //     withFetch: true // Activer fetch pour HttpClient
-  //   })
-  // ],
+
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
