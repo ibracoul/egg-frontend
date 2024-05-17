@@ -12,6 +12,7 @@ import { DataService } from '../../services/data.service';
 })
 export class AlveoleComponent{
   readonly ADD_ALVEOLE = "/api/v1/aviole/add"
+  
  
 
   formData = {

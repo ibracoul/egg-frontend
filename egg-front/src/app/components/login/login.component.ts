@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -7,13 +8,23 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  loginForm = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', Validators.required]
-  })
+  readonly ADD_USER = "/api/v1/user/add"
+  formDataUser = {
+    lastName: '',
+    firstName: '',
+    email: '',
+    tel: '',
+    adresse: ''
+  };
 
-  constructor(
-    private fb: FormBuilder,
-  ) { }
+  constructor(private http: HttpClient) {}
+
+  submitUser() {
+    this.http.post(this.ADD_USER, this.formDataUser)
+      .subscribe(
+        response => console.log('Réponse de l\'API Spring Boot:', response),
+      );
+      (document.getElementById('myForm') as HTMLFormElement).reset();
+  }
 
 }

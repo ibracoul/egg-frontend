@@ -1,29 +1,47 @@
-<div class="card">
-    <div class="card-head text-white bg-info text-center">Login</div>
-    <div class="card-body">
-        <form>
-            <div class="form-row">
-                <div class="col-md-4 mb-3">
-                    <label>Nom</label>
-                    <input type="text" class="form-control" placeholder="Nom">
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label>Prénom</label>
-                    <input type="text" class="form-control" placeholder="Prénom">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="col-md-4 mb-3">
-                    <label>Email</label>
-                    <input type="email" class="form-control" placeholder="Email">
-                </div>
-            </div>
-
-            <div class="text-right">
-                <button class="btn btn-primary">Sign in</button>
-            </div>
-
-        </form>
-    </div>
+<div class="title">
+    <h1>Ajouter un client</h1>
 </div>
+<div class="container">
+    <form id="myForm" class="needs-validation"  novalidate (ngSubmit)="submitUser()">
+        <div class="form-row">
+            <div class="col-md-5 mb-3">
+                <label>Nom</label>
+                <input type="text" class="form-control" placeholder="Nom" required id="nom" name="nom" [(ngModel)]="formDataUser.lastName">
+                <div class="valid-feedback">Ok !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+            </div>
+    
+            <div class="col-md-5 mb-3">
+                <label>Prénom</label>
+                <input type="text" class="form-control" placeholder="Prénom" required id="prenom" name="prenom" [(ngModel)]="formDataUser.firstName">
+                <div class="valid-feedback">Ok !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+            </div>
+    
+            <div class="col-md-5 mb-3">
+                <label>Email</label>
+                <input type="text" class="form-control" placeholder="Email" required id="email" name="email" [(ngModel)]="formDataUser.email">
+                <div class="valid-feedback">Ok !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+            </div>
+
+            <div class="col-md-5 mb-3">
+                <label>Téléphone</label>
+                <input type="text" class="form-control" placeholder="Téléphone" required id="tel" name="tel" [(ngModel)]="formDataUser.tel">
+                <div class="valid-feedback">Ok !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+            </div>
+
+            <div class="col-md-5 mb-3">
+                <label>Adresse</label>
+                <input type="text" class="form-control" placeholder="Adresse" required id="adresse" name="adresse" [(ngModel)]="formDataUser.adresse">
+                <div class="valid-feedback">Ok !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+            </div>
+    
+            <button class="btn btn-primary" type="submit">Enregistrer</button>
+            
+        </div>
+    </form>
+</div>
+<app-footer></app-footer>

@@ -2,6 +2,14 @@
     "/api/v1/aviole/add": {
       "target": "http://localhost:8080",
       "secure": false
+    },
+
+    "/api/v1/user/add": {
+      "target": "http://localhost:8080",
+      "secure": false
     }
   }
+
+
+  
   

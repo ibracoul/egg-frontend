@@ -1,5 +1,7 @@
 <!-- <button class="btn btn-primary" (click)="toggleContentVisibility()" routerLink="/list">Liste commandes</button> -->
-<h3>Commander ou voir la liste des commandes</h3>
+<div class="title">
+    <h1>Commander ou voir la liste des commandes</h1>
+</div>
 <div class="container">
     
     <form id="myForm" class="needs-validation" novalidate (ngSubmit)="submitOrders()">
@@ -61,8 +63,7 @@
             <button class="btn btn-success" (click)="toggleContentVisibility()" routerLink="/list">Afficher</button>
         </div>
         
-        <!-- <a class="nav-link active" (click)="toggleContentVisibility()" aria-current="page" routerLink="/list">List</a> -->
     </div>
-    
-
 </div>
+
+<app-footer></app-footer>
