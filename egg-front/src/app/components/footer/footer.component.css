@@ -1,7 +1,9 @@
 .footer-basic {
     padding:40px 0;
-    background-color:#3259e8;
-    color:#4b4c4d;
+    /* background-color:#809ef9; */
+    background-color:#5a7add;
+    /* color:#4b4c4d; */
+    color: white;
     
   }
   
@@ -41,7 +43,9 @@
     display:inline-block;
     text-align:center;
     border-radius:50%;
-    border:1px solid #ccc;
+    /* border:1px solid #ccc; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* border:1px solid #455bb4; */
     margin:0 8px;
     color:inherit;
     opacity:0.75;
@@ -58,4 +62,6 @@
     color:white;
     margin-bottom:0;
   }
+
+  
   

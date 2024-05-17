@@ -3,5 +3,14 @@
 
 
 
+
 /* html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+body { margin: 0;
+     font-family: Roboto, "Helvetica Neue", sans-serif;
+     
+ } */
+
+ .mat-typography{
+    background-color: rgb(225, 235, 232);
+    background-image: '../assets/images/font.jpg';
+ }
