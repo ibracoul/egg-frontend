@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AlveoleComponent } from './components/alveole/alveole.component';
 import { ListComponent } from './components/list/list.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { UpdateComponent } from './components/update/update.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
 {
     path: 'register',
     component: RegisterComponent
+},
+{
+  path: 'update',
+  component: UpdateComponent
 },
 {
   path: 'alveole',

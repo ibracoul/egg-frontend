@@ -11,10 +11,8 @@ import { DataService } from '../../services/data.service';
   providers:[AlveoleService]
 })
 export class AlveoleComponent{
-  readonly ADD_ALVEOLE = "/api/v1/aviole/add"
   
- 
-
+  readonly ADD_ALVEOLE = "/api/v1/aviole/add"
   formData = {
     quantite: null,
     prix_uni: null,

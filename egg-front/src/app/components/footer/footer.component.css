@@ -43,9 +43,7 @@
     display:inline-block;
     text-align:center;
     border-radius:50%;
-    /* border:1px solid #ccc; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    /* border:1px solid #455bb4; */
     margin:0 8px;
     color:inherit;
     opacity:0.75;

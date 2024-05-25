@@ -5,21 +5,28 @@
   <table class="table">
     <thead>
       <tr>
+        <th>ID</th>
         <th>Quantite</th>
         <th>Prix Unitaire</th>
         <th>Prix Total</th>
         <th>Taille</th>
         <th>Date de sortie</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
       
-      <tr *ngFor="let d of data">        
+      <tr *ngFor="let d of data">   
+        <td>{{d.id}}</td>     
         <td>{{d.quantite}}</td>
         <td>{{d.prix_uni}}</td>
         <td>{{d.prix_tt}}</td>
         <td>{{d.taille}}</td>
         <td>{{d.wati}}</td>
+        <td>
+          <button class="btn btn-warning" type="submit" routerLink="/update">Update</button>
+          <button class="btn btn-danger" type="submit">Delete</button>
+        </td>
       </tr>
       
     </tbody>

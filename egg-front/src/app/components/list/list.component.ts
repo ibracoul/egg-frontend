@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -9,9 +10,11 @@ import { DataService } from '../../services/data.service';
 })
 export class ListComponent implements OnInit{
 
+  
   constructor(private donnee: DataService) {}
   data = this.donnee.data;
   isContentVisible = this.donnee.isContentVisible;
+
 
   public getListAlveole(): void{
     this.donnee.getData().subscribe((response) =>{
@@ -19,6 +22,8 @@ export class ListComponent implements OnInit{
     } )
     
   } 
+
+  
 
   ngOnInit(): void{
     this.getListAlveole();

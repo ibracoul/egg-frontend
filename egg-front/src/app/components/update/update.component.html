@@ -1,0 +1,51 @@
+<div class="container">
+    <form id="myForm" class="needs-validation" novalidate (ngSubmit)="updateOrder()">
+        <div class="form-row">
+            <div class="col-md-6 mb-1">
+                <label for="prenom">Quantité</label>
+                <input type="number" class="form-control" id="quantite" name="quantite" [(ngModel)]="formData.quantite"
+                    placeholder="Nombre d'alveoles à commander" required>
+                <div class="valid-feedback">Ok !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+            </div>
+
+            <div class="col-md-6 mb-1">
+                <label for="prenom">Prix unitaire</label>
+                <input type="number" class="form-control" id="prix_uni" name="prix_uni" list="liste-prix" [(ngModel)]="formData.prix_uni"
+                    placeholder="Prix unitaire" required>
+                    <datalist id="liste-prix">
+                        <option *ngFor="let p of prix" [value]="p">
+                      </datalist>
+                <div class="valid-feedback">Ok !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+            </div>
+
+            <div class="col-md-6 mb-1">
+                <label for="prenom">Prix total</label>
+                <input type="number" class="form-control" id="prix_tt" name="prix_tt" [(ngModel)]="formData.prix_tt"
+                    placeholder="Prix total" required>
+                <div class="valid-feedback">Ok !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+            </div>
+
+            <div class="col-md-6 mb-1">
+                <label for="prenom">Taille</label>
+                <input type="text" class="form-control" id="taille" name="taille" [(ngModel)]="formData.taille"
+                    placeholder="Taille" required>
+                <div class="valid-feedback">Ok !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+            </div>
+
+            <div class="col-md-6 mb-1">
+                <label for="prenom">Date de sortie</label>
+                <input type="date" class="form-control" id="wati" name="wati" [(ngModel)]="formData.wati"
+                    placeholder="Date de sortie de l'alveole" required>
+                <div class="valid-feedback">Ok !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Envoyer</button>
+            
+        </div>
+    </form>
+</div>
