@@ -7,6 +7,7 @@ import { AlveoleComponent } from './components/alveole/alveole.component';
 import { ListComponent } from './components/list/list.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { UpdateComponent } from './components/update/update.component';
+import { ClientsComponent } from './components/clients/clients.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,11 @@ const routes: Routes = [
 {
     path: 'register',
     component: RegisterComponent
+},
+{
+  path: 'client',
+  component: ClientsComponent
+
 },
 {
   path: 'update',

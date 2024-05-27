@@ -1,9 +1,17 @@
 <div class="container">
-    <form id="myForm" class="needs-validation" novalidate (ngSubmit)="updateOrder()">
+    <form id="myForm" class="needs-validation" novalidate (ngSubmit)="onUpdate()">
         <div class="form-row">
             <div class="col-md-6 mb-1">
+                <label for="prenom">ID</label>
+                <input type="number" class="form-control" id="id" name="quantite" [(ngModel)]="alveole.id"
+                    placeholder="Identifiant" required>
+                <div class="valid-feedback">Ok !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+            </div>
+
+            <div class="col-md-6 mb-1">
                 <label for="prenom">Quantité</label>
-                <input type="number" class="form-control" id="quantite" name="quantite" [(ngModel)]="formData.quantite"
+                <input type="number" class="form-control" id="quantite" name="quantite" [(ngModel)]="alveole.quantite"
                     placeholder="Nombre d'alveoles à commander" required>
                 <div class="valid-feedback">Ok !</div>
                 <div class="invalid-feedback">Valeur incorrecte</div>
@@ -11,7 +19,7 @@
 
             <div class="col-md-6 mb-1">
                 <label for="prenom">Prix unitaire</label>
-                <input type="number" class="form-control" id="prix_uni" name="prix_uni" list="liste-prix" [(ngModel)]="formData.prix_uni"
+                <input type="number" class="form-control" id="prix_uni" name="prix_uni" list="liste-prix" [(ngModel)]="alveole.prix_uni"
                     placeholder="Prix unitaire" required>
                     <datalist id="liste-prix">
                         <option *ngFor="let p of prix" [value]="p">
@@ -22,7 +30,7 @@
 
             <div class="col-md-6 mb-1">
                 <label for="prenom">Prix total</label>
-                <input type="number" class="form-control" id="prix_tt" name="prix_tt" [(ngModel)]="formData.prix_tt"
+                <input type="number" class="form-control" id="prix_tt" name="prix_tt" [(ngModel)]="alveole.prix_tt"
                     placeholder="Prix total" required>
                 <div class="valid-feedback">Ok !</div>
                 <div class="invalid-feedback">Valeur incorrecte</div>
@@ -30,7 +38,7 @@
 
             <div class="col-md-6 mb-1">
                 <label for="prenom">Taille</label>
-                <input type="text" class="form-control" id="taille" name="taille" [(ngModel)]="formData.taille"
+                <input type="text" class="form-control" id="taille" name="taille" [(ngModel)]="alveole.taille"
                     placeholder="Taille" required>
                 <div class="valid-feedback">Ok !</div>
                 <div class="invalid-feedback">Valeur incorrecte</div>
@@ -38,7 +46,7 @@
 
             <div class="col-md-6 mb-1">
                 <label for="prenom">Date de sortie</label>
-                <input type="date" class="form-control" id="wati" name="wati" [(ngModel)]="formData.wati"
+                <input type="date" class="form-control" id="wati" name="wati" [(ngModel)]="alveole.wati"
                     placeholder="Date de sortie de l'alveole" required>
                 <div class="valid-feedback">Ok !</div>
                 <div class="invalid-feedback">Valeur incorrecte</div>

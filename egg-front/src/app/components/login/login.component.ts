@@ -19,6 +19,11 @@ export class LoginComponent {
 
   constructor(private http: HttpClient) {}
 
+  isContentVisible: boolean = false;
+  toggleContentVisibility() {
+    this.isContentVisible = !this.isContentVisible;
+  }
+
   submitUser() {
     this.http.post(this.ADD_USER, this.formDataUser)
       .subscribe(

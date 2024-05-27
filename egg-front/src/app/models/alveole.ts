@@ -6,6 +6,7 @@ export class Alveole{
     prix_tt: number;
     taille: Taille;
     wati: string
+    
 
     constructor(quantite: number, prix_uni: number, prix_tt: number, taille: Taille, wati: string){
         this.quantite = quantite;
@@ -15,4 +16,5 @@ export class Alveole{
         this.wati = wati;
 
     }
+
 }

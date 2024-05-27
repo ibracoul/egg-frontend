@@ -15,6 +15,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { UpdateComponent } from './components/update/update.component';
+import { ClientsComponent } from './components/clients/clients.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { UpdateComponent } from './components/update/update.component';
     ListComponent,
     FooterComponent,
     ContactComponent,
-    UpdateComponent
+    UpdateComponent,
+    ClientsComponent
   ],
   imports: [
     BrowserModule,

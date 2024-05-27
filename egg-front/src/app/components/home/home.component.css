@@ -67,15 +67,20 @@
 
 .box2 > img{
     width: 250px;
-    height: 400px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 250px;
     border-radius: 10px;
 }
 
 .box3 > img{
     width: 250px;
-    height: 400px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+
+.box4 > img{
+    width: 250px;
+    height: 250px;
     border-radius: 10px;
 }
 

@@ -9,7 +9,7 @@
       "secure": false
     },
 
-    "/api/v1/aviole/up/{id}": {
+    "/api/v1/alveole/up/{id}": {
       "target": "http://localhost:8080",
       "secure": false
     }
