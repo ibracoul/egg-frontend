@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  selector: 'app-record',
+  templateUrl: './record.component.html',
+  styleUrl: './record.component.css'
 })
-export class LoginComponent {
+export class RecordComponent {
   readonly ADD_USER = "/api/v1/user/add"
   formDataUser = {
     lastName: '',

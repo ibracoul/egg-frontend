@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './components/login/login.component';
+import { RecordComponent } from './components/record/record.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { AlveoleComponent } from './components/alveole/alveole.component';
@@ -11,8 +11,8 @@ import { ClientsComponent } from './components/clients/clients.component';
 
 const routes: Routes = [
   {
-    path: 'login',
-    component: LoginComponent
+    path: 'record',
+    component: RecordComponent
 
 },
 {
@@ -34,7 +34,7 @@ const routes: Routes = [
   component: UpdateComponent
 },
 {
-  path: 'alveole',
+  path: 'commande',
   component: AlveoleComponent
 },
 {

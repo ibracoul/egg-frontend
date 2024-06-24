@@ -10,7 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AlveoleComponent } from './components/alveole/alveole.component';
 import { ListComponent } from './components/list/list.component';
-import { LoginComponent } from './components/login/login.component';
+import { RecordComponent } from './components/record/record.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -21,7 +21,7 @@ import { ClientsComponent } from './components/clients/clients.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
+    RecordComponent,
     RegisterComponent,
     HomeComponent,
     AlveoleComponent,
@@ -42,7 +42,7 @@ import { ClientsComponent } from './components/clients/clients.component';
     provideClientHydration(),
     provideAnimationsAsync()
   ],
-  
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

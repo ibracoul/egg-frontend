@@ -24,8 +24,8 @@
         <td>{{d.taille}}</td>
         <td>{{d.wati}}</td>
         <td>
-          <button class="btn btn-warning" type="submit" routerLink="/update">Update</button>
-          <button class="btn btn-danger" type="submit">Delete</button>
+          <button class="btn btn-warning" type="submit" routerLink="/update" [state]="d">Modifier</button>
+          <button class="btn btn-danger" type="submit" (click)="deleteOrder(d.id)">Supprimer</button>
         </td>
       </tr>
       

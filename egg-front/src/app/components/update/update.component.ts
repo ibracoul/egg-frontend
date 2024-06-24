@@ -1,14 +1,17 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable, catchError } from 'rxjs';
 import { Alveole } from '../../models/alveole';
+import { ActivatedRoute, Route } from '@angular/router';
+import { Router } from 'express';
+import { LocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'app-update',
   templateUrl: './update.component.html',
   styleUrl: './update.component.css'
 })
-export class UpdateComponent {
+export class UpdateComponent implements OnInit {
 
   readonly UP_ORDER = "/api/v1/alveole/up"
   formData = {
@@ -21,33 +24,22 @@ export class UpdateComponent {
   prix: number[] = [2000, 2500, 3000];
   isContentVisible: boolean = false;
   alveole: any = {
-    id: 1,
+    id: '',
     quantite: null,
     prix_uni: null,
     prix_tt: null,
     wati: '',
     taille: ''
   };
-  // alveole = new Alveole(
-  //   this.formData.quantite,
-  //   this.formData.prix_uni,
-  //   this.formData.prix_tt,
-  //   this.formData.wati,
-  //   this.formData.taille
-  // );
 
-
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient, private location: LocationStrategy){}
   toggleContentVisibility() {
     this.isContentVisible = !this.isContentVisible;
   }
 
-  // public updateOrder(){
-  //   this.http.put(this.UP_ORDER, this.formData)
-  //     .subscribe(
-  //       response => console.log('Réponse de l\'API Spring Boot:', response),
-  //     );
-  // }
+  ngOnInit(): void {
+    this.alveole = this.location.getState();
+  }
 
   updateOrder(id: number, alveole: any): Observable<any> {
     const url = `${this.UP_ORDER}/${id}`;
